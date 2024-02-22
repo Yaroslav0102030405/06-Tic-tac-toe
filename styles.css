@@ -1,5 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: black;
 }
 
 .title {
@@ -7,17 +9,29 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
 .table {
   display: flex;
   justify-content: center;
   /* text-align: center; */
   /* align-items: center; */
+  background-color: black;
 }
 
 .btn {
   display: block;
   margin: 0 auto;
   margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: inherit;
+  background-color: white;
 }
 
 /* table {
@@ -28,6 +42,38 @@ body {
 td {
   width: 150px;
   height: 150px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* border: 1px solid white; */
   text-align: center;
+
+  color: white;
+  /* background-color: white; */
+  background-color: black;
+}
+
+@media screen and (max-width: 500px) {
+  td {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  td img {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+.td1 {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.td3 {
+  border-bottom: 1px solid white;
+}
+
+.td2 {
+  border-right: 1px solid white;
 }

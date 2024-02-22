@@ -30,9 +30,11 @@ function isVictory() {
 
 function tap(e) {
   if (counter % 2 == 0) {
-    e.target.innerHTML = '<img src= "./images/cross.png" width=100%>';
+    e.target.innerHTML =
+      '<img src= "./images/cross6.png" width=140  background-color="white">';
   } else {
-    e.target.innerHTML = '<img src= "./images/zero.png" width=100%>';
+    e.target.innerHTML =
+      '<img src= "./images/zero6.png" width=140 background-color="white">';
   }
 
   if (isVictory()) {
@@ -40,9 +42,9 @@ function tap(e) {
       cell.removeEventListener("click", tap);
     }
     if (counter % 2 == 0) {
-      title.innerText = "X is winner!";
+      title.innerText = "Player X winner!";
     } else {
-      title.innerText = "0 is winner!";
+      title.innerText = "Player O winner!";
     }
   } else if (counter == 8) {
     title.innerText = "Draw!";
