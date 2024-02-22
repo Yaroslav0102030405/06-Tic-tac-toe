@@ -7,6 +7,14 @@ body {
 .title {
   font-size: 50px;
   text-align: center;
+  /* background: linear-gradient(270deg, #3f5efb, #fc466b); */
+  background: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 1) 30%,
+    rgba(147, 41, 222, 1) 55%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 500px) {
@@ -33,7 +41,13 @@ body {
   padding: 10px 20px;
   font-size: 20px;
   font-family: inherit;
-  background-color: white;
+  color: white;
+  /* background-color: white; */
+  background: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(147, 41, 222, 1) 96%
+  );
 }
 
 /* table {
