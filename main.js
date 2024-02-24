@@ -5,6 +5,14 @@ const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", startGame);
 
+let totalX = 0;
+let totalO = 0;
+let totalDraw = 0;
+
+const playerX = document.querySelector(".playerx");
+const playerO = document.querySelector(".playero");
+const draw = document.querySelector(".draw");
+
 function isVictory() {
   let combos = [
     [0, 1, 2],
@@ -31,10 +39,10 @@ function isVictory() {
 function tap(e) {
   if (counter % 2 == 0) {
     e.target.innerHTML =
-      '<img src= "./images/cross6.png" width=140  background-color="white">';
+      '<img src= "./images/cross7.png" width=140  background-color="white">';
   } else {
     e.target.innerHTML =
-      '<img src= "./images/zero6.png" width=140 background-color="white">';
+      '<img src= "./images/zero7.png" width=140 background-color="white">';
   }
 
   if (isVictory()) {
@@ -43,11 +51,16 @@ function tap(e) {
     }
     if (counter % 2 == 0) {
       title.innerText = "Player X winner!";
+      // console.log((playerX += 1));
+      playerX.textContent = totalX += 1;
+      // total += playerxx.innerText;
     } else {
       title.innerText = "Player O winner!";
+      playerO.textContent = totalO += 1;
     }
   } else if (counter == 8) {
     title.innerText = "Draw!";
+    draw.textContent = totalDraw += 1;
   }
 
   counter++;
