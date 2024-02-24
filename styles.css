@@ -50,6 +50,10 @@ body {
   );
 }
 
+.btn:active {
+  background: green;
+}
+
 /* table {
   align-items: center;
   text-align: center;
@@ -107,7 +111,7 @@ td {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  width: 250px;
+  width: 280px;
   color: white;
   background-color: aliceblue;
 }

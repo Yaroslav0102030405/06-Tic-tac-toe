@@ -9,9 +9,12 @@ let totalX = 0;
 let totalO = 0;
 let totalDraw = 0;
 
+let totalGame = 0;
+
 const playerX = document.querySelector(".playerx");
 const playerO = document.querySelector(".playero");
 const draw = document.querySelector(".draw");
+const total = document.querySelector(".total");
 
 function isVictory() {
   let combos = [
@@ -49,26 +52,29 @@ function tap(e) {
     for (let cell of cells) {
       cell.removeEventListener("click", tap);
     }
-    if (counter % 2 == 0) {
-      title.innerText = "Player X winner!";
+    if (counter % 2 === 0) {
+      title.textContent = "Player X winner!";
       // console.log((playerX += 1));
       playerX.textContent = totalX += 1;
       // total += playerxx.innerText;
     } else {
-      title.innerText = "Player O winner!";
+      title.textContent = "Player O winner!";
       playerO.textContent = totalO += 1;
     }
-  } else if (counter == 8) {
+  } else if (counter === 8) {
     title.innerText = "Draw!";
     draw.textContent = totalDraw += 1;
   }
+
+  // totalGame = totalX + totalO + totalDraw;
+  total.textContent = totalX + totalO + totalDraw;
 
   counter++;
   e.target.removeEventListener("click", tap);
 }
 
 function startGame() {
-  title.innerText = "Tic Tac Toe";
+  title.textContent = "Tic Tac Toe";
   counter = 0;
 
   for (let cell of cells) {
