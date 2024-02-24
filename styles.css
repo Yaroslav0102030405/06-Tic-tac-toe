@@ -93,6 +93,17 @@ td {
   }
 }
 
+td imd {
+  /* background: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(147, 41, 222, 1) 96%
+  ); */
+  fill: aqua;
+  color: aqua;
+  background-color: aqua;
+}
+
 .td1 {
   border-right: 1px solid white;
   border-bottom: 1px solid white;
@@ -124,3 +135,8 @@ td {
 .th {
   color: black;
 }
+
+/* .img-active {
+  color: blue;
+  background-color: aqua;
+} */

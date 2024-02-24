@@ -2,6 +2,13 @@ let counter = 0;
 const cells = document.querySelectorAll("#table td");
 const title = document.querySelector(".title");
 const btn = document.querySelector(".btn");
+// const imgActive = document.querySelector("#td img");
+
+// imgActive.addEventListener("click", (e) => {
+//   if (e.target === 3) {
+//     imgActive.classList.add("img-active");
+//   }
+// });
 
 btn.addEventListener("click", startGame);
 
@@ -40,11 +47,10 @@ function isVictory() {
 
 function tap(e) {
   if (counter % 2 == 0) {
-    e.target.innerHTML =
-      '<img src= "./images/cross7.png" width=140  background-color="white">';
+    e.target.innerHTML = '<img src= "./images/cross-svg.svg" width=140">';
+    // imgActive.classList.add("img-active");
   } else {
-    e.target.innerHTML =
-      '<img src= "./images/zero7.png" width=140 background-color="white">';
+    e.target.innerHTML = '<img src= "./images/zero-svg.svg" width=140">';
   }
 
   if (isVictory()) {
@@ -53,6 +59,7 @@ function tap(e) {
     }
     if (counter % 2 === 0) {
       title.textContent = "Player X winner!";
+      // e.target.classList.add("img-active");
       // console.log((playerX += 1));
       playerX.textContent = totalX += 1;
       // total += playerxx.innerText;
