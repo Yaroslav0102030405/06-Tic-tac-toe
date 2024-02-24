@@ -8,7 +8,6 @@ btn.addEventListener("click", startGame);
 let totalX = 0;
 let totalO = 0;
 let totalDraw = 0;
-
 let totalGame = 0;
 
 const playerX = document.querySelector(".playerx");
