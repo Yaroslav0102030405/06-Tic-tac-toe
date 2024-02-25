@@ -35,9 +35,9 @@ function isVictory() {
   ];
   for (let combo of combos) {
     if (
-      cells[combo[0]].innerHTML == cells[combo[1]].innerHTML &&
-      cells[combo[1]].innerHTML == cells[combo[2]].innerHTML &&
-      cells[combo[0]].innerHTML != ""
+      cells[combo[0]].innerHTML === cells[combo[1]].innerHTML &&
+      cells[combo[1]].innerHTML === cells[combo[2]].innerHTML &&
+      cells[combo[0]].innerHTML !== ""
     ) {
       return true;
     }
@@ -46,7 +46,7 @@ function isVictory() {
 }
 
 function tap(e) {
-  if (counter % 2 == 0) {
+  if (counter % 2 === 0) {
     e.target.innerHTML = '<img src= "./images/cross-svg.svg" width=140">';
     // imgActive.classList.add("img-active");
   } else {
