@@ -47,28 +47,37 @@ function isVictory() {
 
 function tap(e) {
   if (counter % 2 === 0) {
-    e.target.innerHTML = '<img src= "./images/cross-svg.svg" width=140">';
+    e.target.innerHTML =
+      '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody1.mp3" autoplay preload="auto"></audio>';
     // imgActive.classList.add("img-active");
   } else {
-    e.target.innerHTML = '<img src= "./images/zero-svg.svg" width=140">';
+    e.target.innerHTML =
+      '<img src= "./images/zero-svg.svg" width=140"> <audio src="./music/melody1.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
     for (let cell of cells) {
       cell.removeEventListener("click", tap);
+      // e.target.innerHTML =
+      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
     }
     if (counter % 2 === 0) {
-      title.textContent = "Player X winner!";
-      // e.target.classList.add("img-active");
-      // console.log((playerX += 1));
+      title.innerHTML =
+        'Player X winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+      // title.innerHTML =
+      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       // total += playerxx.innerText;
+      // e.target.innerHTML =
+      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
     } else {
-      title.textContent = "Player O winner!";
+      title.innerHTML =
+        'Player O winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
     }
   } else if (counter === 8) {
-    title.innerText = "Draw!";
+    title.innerHTML =
+      'Draw! <audio src="./music/draw1.mp3" autoplay preload="auto"></audio>';
     draw.textContent = totalDraw += 1;
   }
 
@@ -80,7 +89,8 @@ function tap(e) {
 }
 
 function startGame() {
-  title.textContent = "Tic Tac Toe";
+  title.innerHTML =
+    'Tic Tac Toe <audio src="./music/start.mp3" autoplay preload="auto"></audio>';
   counter = 0;
 
   for (let cell of cells) {
