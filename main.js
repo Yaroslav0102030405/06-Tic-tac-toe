@@ -48,11 +48,11 @@ function isVictory() {
 function tap(e) {
   if (counter % 2 === 0) {
     e.target.innerHTML =
-      '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody1.mp3" autoplay preload="auto"></audio>';
+      '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
     // imgActive.classList.add("img-active");
   } else {
     e.target.innerHTML =
-      '<img src= "./images/zero-svg.svg" width=140"> <audio src="./music/melody1.mp3" autoplay preload="auto"></audio>';
+      '<img src= "./images/zero-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
@@ -90,7 +90,7 @@ function tap(e) {
 
 function startGame() {
   title.innerHTML =
-    'Tic Tac Toe <audio src="./music/start.mp3" autoplay preload="auto"></audio>';
+    'Tic Tac Toe <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
 
   for (let cell of cells) {
