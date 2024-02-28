@@ -168,6 +168,25 @@ td imd {
   background-color: #ffc000;
 }
 
+.btn {
+  display: none;
+}
+
+.btn__active {
+  display: block;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+
+  color:rgba(147, 41, 222, 1) ;
+}
+
+.step__none {
+  display: none;
+}
+
 /* loader ____________________________ */
 
 /* .preloader {

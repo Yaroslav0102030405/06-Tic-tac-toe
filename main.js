@@ -2,6 +2,7 @@ let counter = 0;
 const cells = document.querySelectorAll("#table td");
 const title = document.querySelector(".title");
 const btn = document.querySelector(".btn");
+const step = document.querySelector(".step");
 // const imgActive = document.querySelector("#td img");
 
 // imgActive.addEventListener("click", (e) => {
@@ -67,6 +68,8 @@ function tap(e) {
       // title.innerHTML =
       //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
+      btn.classList.add("btn__active");
+      step.classList.add('step__none')
       // total += playerxx.innerText;
       // e.target.innerHTML =
       //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
@@ -74,11 +77,13 @@ function tap(e) {
       title.innerHTML =
         'Player O winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
+      btn.classList.add("btn__active");
     }
   } else if (counter === 8) {
     title.innerHTML =
       'Draw! <audio src="./music/draw1.mp3" autoplay preload="auto"></audio>';
     draw.textContent = totalDraw += 1;
+    btn.classList.add("btn__active");
   }
 
   // totalGame = totalX + totalO + totalDraw;
@@ -92,6 +97,7 @@ function startGame() {
   title.innerHTML =
     'Tic Tac Toe <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
+  btn.classList.remove("btn__active");
 
   for (let cell of cells) {
     cell.innerHTML = "";
