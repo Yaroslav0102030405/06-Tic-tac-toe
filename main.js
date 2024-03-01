@@ -49,11 +49,12 @@ function isVictory() {
 function tap(e) {
   if (counter % 2 === 0) {
     e.target.innerHTML =
-      '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      // '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<svg class="icon" width="100" height="100"><use href="./images/sprite.svg#icon-close_thick_icon_137749"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
     // imgActive.classList.add("img-active");
   } else {
     e.target.innerHTML =
-      '<img src= "./images/zero-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
@@ -95,13 +96,19 @@ function tap(e) {
 
 const colorsGame = () => {
   const colors = [
+    "#a8b1db",
+    "#855d4f",
+    "#529873",
+    "#b7ded2",
+    "#fbe8cb",
+    "#33007b",
     "#00ffa5",
     "#a8b1db",
     "#ffd700",
     "#69b4ff",
-    "#000000",
     "#ff4c4c",
     "#855d4f",
+    "#73607d",
   ];
   const max = colors.length - 1;
   const min = 0;

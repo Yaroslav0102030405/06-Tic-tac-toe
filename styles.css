@@ -65,13 +65,8 @@ body {
 td {
   width: 120px;
   height: 120px;
-  /* border: 1px solid black; */
-  /* border: 1px solid white; */
   text-align: center;
-
   color: white;
-  /* background-color: white; */
-  background-color: black;
 }
 
 @media screen and (max-width: 500px) {
@@ -82,36 +77,32 @@ td {
 }
 
 @media screen and (max-width: 500px) {
-  td img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  td img {
+  td svg {
     width: 70px;
     height: 70px;
   }
 }
-/* 
-td imd {
-  fill: aqua;
-  color: aqua;
-  background-color: aqua;
-} */
+
+@media screen and (min-width: 500px) {
+  td svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
 .td1 {
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .td3 {
-  border-bottom: 1px solid white;
+  
+  border-bottom: 2px solid #000000;
 }
 
 .td2 {
-  border-right: 1px solid white;
+  border-right: 2px solid #000000;
 }
 
 .table1 {
@@ -122,13 +113,17 @@ td imd {
   margin-bottom: 50px;
   width: 280px;
   color: white;
+  /* color: #000000; */
   /* background-color: aliceblue; */
-  background-color: rgba(147, 41, 222, 1);
+  /* background-color: rgba(147, 41, 222, 1); */
+  background-color: white;
+  background-color: #000000;
 }
 
 .td4 {
   height: 30px;
-  color: rgba(147, 41, 222, 1);
+  /* color: rgba(147, 41, 222, 1); */
+  color: white;
 }
 
 .th {
@@ -146,14 +141,14 @@ td imd {
   /* color: white; */
   color: black;
   /* background: rgba(253, 29, 29, 1); */
-  background-color: #f85f6b;
+  background-color: #a500ff;
 }
 
 .purple {
   /* color: white; */
   color: black;
-  background: rgba(147, 41, 222, 1);
-  /* background-color: #b2b6fb; */
+  /* background: rgba(147, 41, 222, 1); */
+  background-color: #FFC000;
 }
 
 .green {
@@ -165,7 +160,7 @@ td imd {
 
 .white {
   /* color: white; */
-  background-color: #ffc000;
+  background-color: white;
 }
 
 .btn {
@@ -185,6 +180,23 @@ td imd {
 
 .step__none {
   display: none;
+}
+
+/* .icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+} */
+
+.icon {
+  fill:#a500ff;
+}
+
+.icon2 {
+fill: #FFC000;
 }
 
 /* loader ____________________________ */
