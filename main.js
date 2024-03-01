@@ -69,7 +69,7 @@ function tap(e) {
       //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
-      step.classList.add('step__none')
+      step.classList.add("step__none");
       // total += playerxx.innerText;
       // e.target.innerHTML =
       //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
@@ -93,11 +93,33 @@ function tap(e) {
   e.target.removeEventListener("click", tap);
 }
 
+const colorsGame = () => {
+  const colors = [
+    "#00ffa5",
+    "#a8b1db",
+    "#ffd700",
+    "#69b4ff",
+    "#000000",
+    "#ff4c4c",
+    "#855d4f",
+  ];
+  const max = colors.length - 1;
+  const min = 0;
+
+  const index = Math.round(Math.random() * (max - min) + min);
+
+  const color = colors[index];
+
+  document.body.style.backgroundColor = color;
+};
+
 function startGame() {
   title.innerHTML =
     'Tic Tac Toe <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
+  // colorsGame();
+  btn.addEventListener("click", colorsGame());
 
   for (let cell of cells) {
     cell.innerHTML = "";
