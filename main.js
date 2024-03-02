@@ -107,7 +107,7 @@ const colorsGame = () => {
 
 function startGame() {
   text.innerHTML =
-    'player x VS player o <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
+    'Player X vs Player O <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
   btn.addEventListener("click", colorsGame());
