@@ -3,7 +3,7 @@ body {
   color: white;
   background-color: black;
 
-  /* overflow-x: hidden; */
+  overflow: hidden;
 }
 
 .title {
@@ -78,7 +78,7 @@ td {
   height: 120px;
   text-align: center;
   color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 @media screen and (max-width: 500px) {
