@@ -7,8 +7,8 @@ body {
 }
 
 .title {
-  margin-top: 60px;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 50px;
   text-align: center;
   /* background: linear-gradient(270deg, #3f5efb, #fc466b); */
@@ -24,9 +24,19 @@ body {
 @media screen and (max-width: 500px) {
   .title {
     font-size: 30px;
-    margin-top: 70px;
-    margin-bottom: 0px;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
   }
+}
+
+.text {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .table {
@@ -51,6 +61,7 @@ body {
     rgba(253, 29, 29, 1) 0%,
     rgba(147, 41, 222, 1) 96%
   );
+  cursor: pointer;
 }
 
 .btn:active {
@@ -67,6 +78,7 @@ td {
   height: 120px;
   text-align: center;
   color: white;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
@@ -110,7 +122,8 @@ td {
   /* margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 280px;
   color: white;
   /* color: #000000; */
@@ -197,6 +210,45 @@ td {
 
 .icon2 {
 fill: #FFC000;
+}
+
+.circle {
+  /* background: green; */
+  /* border-radius: 100%; */
+  /* width: 100px; */
+  /* height: 100px; */
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
 }
 
 /* loader ____________________________ */

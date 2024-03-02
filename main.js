@@ -3,13 +3,7 @@ const cells = document.querySelectorAll("#table td");
 const title = document.querySelector(".title");
 const btn = document.querySelector(".btn");
 const step = document.querySelector(".step");
-// const imgActive = document.querySelector("#td img");
-
-// imgActive.addEventListener("click", (e) => {
-//   if (e.target === 3) {
-//     imgActive.classList.add("img-active");
-//   }
-// });
+const text = document.querySelector(".text");
 
 btn.addEventListener("click", startGame);
 
@@ -51,7 +45,6 @@ function tap(e) {
     e.target.innerHTML =
       // '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
       '<svg class="icon" width="100" height="100"><use href="./images/sprite.svg#icon-close_thick_icon_137749"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
-    // imgActive.classList.add("img-active");
   } else {
     e.target.innerHTML =
       '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
@@ -60,34 +53,25 @@ function tap(e) {
   if (isVictory()) {
     for (let cell of cells) {
       cell.removeEventListener("click", tap);
-      // e.target.innerHTML =
-      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
     }
     if (counter % 2 === 0) {
-      title.innerHTML =
+      text.innerHTML =
         'Player X winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
-      // title.innerHTML =
-      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
-      // total += playerxx.innerText;
-      // e.target.innerHTML =
-      //   '<audio src="./music/winner.mp3" autoplay preload="auto"></audio>';
     } else {
-      title.innerHTML =
+      text.innerHTML =
         'Player O winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
       btn.classList.add("btn__active");
     }
   } else if (counter === 8) {
-    title.innerHTML =
+    text.innerHTML =
       'Draw! <audio src="./music/draw1.mp3" autoplay preload="auto"></audio>';
     draw.textContent = totalDraw += 1;
     btn.classList.add("btn__active");
   }
-
-  // totalGame = totalX + totalO + totalDraw;
   total.textContent = totalX + totalO + totalDraw;
 
   counter++;
@@ -121,11 +105,10 @@ const colorsGame = () => {
 };
 
 function startGame() {
-  title.innerHTML =
-    'Tic Tac Toe <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
+  text.innerHTML =
+    'player x VS player o <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
-  // colorsGame();
   btn.addEventListener("click", colorsGame());
 
   for (let cell of cells) {
