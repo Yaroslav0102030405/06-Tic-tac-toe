@@ -34,8 +34,14 @@ function isVictory() {
       cells[combo[1]].innerHTML === cells[combo[2]].innerHTML &&
       cells[combo[0]].innerHTML !== ""
     ) {
+      cells[combo[0]].classList.add("active-x");
+      cells[combo[1]].classList.add("active-x");
+      cells[combo[2]].classList.add("active-x");
       return true;
     }
+    cells[combo[0]].classList.remove("active-x");
+    cells[combo[1]].classList.remove("active-x");
+    cells[combo[2]].classList.remove("active-x");
   }
   return false;
 }
@@ -115,6 +121,23 @@ function startGame() {
   for (let cell of cells) {
     cell.innerHTML = "";
     cell.addEventListener("click", tap);
+  }
+
+  let combos = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  for (let combo of combos) {
+    cells[combo[0]].classList.remove("active-x");
+    cells[combo[1]].classList.remove("active-x");
+    cells[combo[2]].classList.remove("active-x");
   }
 }
 
