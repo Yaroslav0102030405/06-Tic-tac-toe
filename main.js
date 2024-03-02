@@ -60,6 +60,7 @@ function tap(e) {
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
+      // cells.classList.add("active-x");
     } else {
       text.innerHTML =
         'Player O winner!  <img class="img-winner" src="https://clipart.world/wp-content/uploads/2020/12/Winner-Trophy-clipart-transparent.png" alt="winner"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';

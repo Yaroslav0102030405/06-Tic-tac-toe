@@ -256,6 +256,10 @@ fill: #FFC000;
   height: 16px;
 }
 
+.active-x {
+  background-color: #32cd32;
+}
+
 /* loader ____________________________ */
 
 /* .preloader {
