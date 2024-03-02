@@ -56,13 +56,13 @@ function tap(e) {
     }
     if (counter % 2 === 0) {
       text.innerHTML =
-        'Player X winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Player X winner!  <img class="img-winner" src="https://clipart.world/wp-content/uploads/2020/12/Winner-Trophy-clipart-transparent.png" alt="winner"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
     } else {
       text.innerHTML =
-        'Player O winner! <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Player O winner!  <img class="img-winner" src="https://clipart.world/wp-content/uploads/2020/12/Winner-Trophy-clipart-transparent.png" alt="winner"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
       btn.classList.add("btn__active");
     }

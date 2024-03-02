@@ -251,6 +251,11 @@ fill: #FFC000;
   }
 }
 
+.img-winner {
+  width: 16px;
+  height: 16px;
+}
+
 /* loader ____________________________ */
 
 /* .preloader {
