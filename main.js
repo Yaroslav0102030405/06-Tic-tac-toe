@@ -39,9 +39,9 @@ function isVictory() {
       cells[combo[2]].classList.add("active-x");
       return true;
     }
-    cells[combo[0]].classList.remove("active-x");
-    cells[combo[1]].classList.remove("active-x");
-    cells[combo[2]].classList.remove("active-x");
+    // cells[combo[0]].classList.remove("active-x");
+    // cells[combo[1]].classList.remove("active-x");
+    // cells[combo[2]].classList.remove("active-x");
   }
   return false;
 }
@@ -49,11 +49,12 @@ function isVictory() {
 function tap(e) {
   if (counter % 2 === 0) {
     e.target.innerHTML =
-      // '<img src= "./images/cross-svg.svg" width=140"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
-      '<svg class="icon" width="100" height="100"><use href="./images/sprite.svg#icon-close_thick_icon_137749"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<img class="tank" src= "./images/tank.png" width=80"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+    // '<svg class="icon" width="100" height="100"><use href="./images/sprite.svg#icon-close_thick_icon_137749"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   } else {
     e.target.innerHTML =
-      '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      // '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<img class="tank" src= "./images/самолет.png" width=90"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
@@ -62,14 +63,14 @@ function tap(e) {
     }
     if (counter % 2 === 0) {
       text.innerHTML =
-        'Player X winner!  <img class="img-winner" src="https://clipart.world/wp-content/uploads/2020/12/Winner-Trophy-clipart-transparent.png" alt="winner"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Tanks winner! <img src= "./images/tank.png" width=20">  <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
       // cells.classList.add("active-x");
     } else {
       text.innerHTML =
-        'Player O winner!  <img class="img-winner" src="https://clipart.world/wp-content/uploads/2020/12/Winner-Trophy-clipart-transparent.png" alt="winner"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Planes winner! <img src= "./images/самолет.png" width=20"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
       btn.classList.add("btn__active");
     }
@@ -113,7 +114,7 @@ const colorsGame = () => {
 
 function startGame() {
   text.innerHTML =
-    'Player X vs Player O <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
+    'May the best one win <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
   btn.addEventListener("click", colorsGame());
