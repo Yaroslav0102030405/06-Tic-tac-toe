@@ -54,7 +54,7 @@ function tap(e) {
   } else {
     e.target.innerHTML =
       // '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
-      '<img class="tank" src= "./images/самолет.png" width=90"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<img class="tank" src= "./images/самолет.png" width=80"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
