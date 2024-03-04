@@ -114,7 +114,7 @@ const colorsGame = () => {
 
 function startGame() {
   text.innerHTML =
-    'May the best one win <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
+    '<img src= "./images/tank.png" width=20"> <img src= "./images/tank.png" width=20"> <img src= "./images/tank.png" width=20"> <img src= "./images/самолет.png" width=20"> <img src= "./images/самолет.png" width=20"> <img src= "./images/самолет.png" width=20"> <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
   btn.addEventListener("click", colorsGame());
