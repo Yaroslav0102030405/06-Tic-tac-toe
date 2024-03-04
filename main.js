@@ -39,9 +39,6 @@ function isVictory() {
       cells[combo[2]].classList.add("active-x");
       return true;
     }
-    // cells[combo[0]].classList.remove("active-x");
-    // cells[combo[1]].classList.remove("active-x");
-    // cells[combo[2]].classList.remove("active-x");
   }
   return false;
 }
@@ -67,7 +64,6 @@ function tap(e) {
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
-      // cells.classList.add("active-x");
     } else {
       text.innerHTML =
         'Planes winner! <img src= "./images/самолет.png" width=20"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
