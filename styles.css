@@ -4,9 +4,9 @@ body {
   background-color: black;
 
   overflow: hidden;
-  background-image: url(./images/AcI5.gif);
+  /* background-image: url(./images/AcI5.gif);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .title {
