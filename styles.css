@@ -54,19 +54,20 @@ tr {
 .btn {
   display: block;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 10px 20px;
   font-size: 20px;
   font-family: inherit;
   color: white;
   background: #8A9A5B;
-  cursor: pointer;
+  cursor: url(/images/cursor2.png), auto;
   border: none;
+  border-radius: 10px;
 }
 
-.btn:active {
-  background: green;
-}
+/* .btn:active {
+  background: white;
+} */
 
 td {
   width: 120px;
@@ -104,6 +105,13 @@ td {
   border-right: 2px solid #8A9A5B;
 }
 
+.table {
+  background-image: url(/images/567.png);
+  background-repeat: no-repeat;
+  background-position: center ;
+  filter: blur(0.5px);
+}
+
 .table1 {
   display: block;
   margin-left: auto;
@@ -114,6 +122,7 @@ td {
   color: white;
   /* background-color: white; */
   background-color: #000000;
+  
 }
 
 .td4 {
@@ -155,7 +164,7 @@ td {
 .step {
   display: flex;
   justify-content: center;
-  color: rgb(8,144,99);
+  color: #8A9A5B;
 }
 
 .step__none {

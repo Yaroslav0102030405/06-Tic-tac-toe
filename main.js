@@ -97,6 +97,8 @@ const colorsGame = () => {
     "#ff4c4c",
     "#855d4f",
     "#73607d",
+    "#89CFF0",
+    "#6495ED",
   ];
   const max = colors.length - 1;
   const min = 0;
