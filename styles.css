@@ -4,6 +4,12 @@ body {
   background-color: black;
 
   overflow: hidden;
+
+  cursor: url(/images/cursor1.png), auto;
+}
+
+tr {
+  cursor: url(/images/cursor2.png), auto;
 }
 
 .title {
