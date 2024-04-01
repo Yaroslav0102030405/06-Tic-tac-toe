@@ -223,7 +223,9 @@ fill: #FFC000;
 }
 
 .active-x {
-background-image: url(./images/3BBT.gif);
+/* background-image: url(./images/3BBT.gif); */
+background-image: url(/images/YKmD.gif);
+background-position: center;
 }
 
 
