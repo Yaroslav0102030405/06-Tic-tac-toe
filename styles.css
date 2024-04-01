@@ -112,6 +112,13 @@ td {
   filter: blur(0.5px);
 }
 
+@media screen and (max-width: 768px) {
+  .table {
+    /* background-position: center; */
+background-size: cover;
+  }
+}
+
 .table1 {
   display: block;
   margin-left: auto;
