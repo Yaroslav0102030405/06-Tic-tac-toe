@@ -228,6 +228,49 @@ background-image: url(/images/YKmD.gif);
 background-position: center;
 }
 
+@media screen and (min-width: 1200px) {
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .box1 img  {
+    display: none;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .box2 img  {
+      display: none;
+      }
+    }
+
+/* .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 100px;
+} */
+
+@media screen and (min-width: 1200px) {
+  table {
+    padding-left: 65px;
+  padding-right: 65px;
+    }
+  }
+
+/* table {
+  padding-left: 65px;
+  padding-right: 65px;
+} */
+
+
 
 /* loader ____________________________ */
 
