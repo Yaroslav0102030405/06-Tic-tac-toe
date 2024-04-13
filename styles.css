@@ -103,7 +103,10 @@ td {
 }
 
 .table {
-  background-image: url(/images/567.png);
+  /* background-image: url(/images/567.png); */
+  /* background-image: url(/images/ukraine1.png); */
+  background-image: url(/images/ukraine4.png);
+  /* background-image: url(/images/ukraine3.png); */
   background-repeat: no-repeat;
   background-position: center ;
   filter: blur(0.5px);
