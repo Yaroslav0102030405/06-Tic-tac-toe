@@ -67,7 +67,7 @@ tr {
 }
 
 td {
-  width: 120px;
+  width: 158px;
   height: 120px;
   text-align: center;
   color: white;
@@ -114,7 +114,7 @@ td {
 
 @media screen and (max-width: 768px) {
   .table {
-   background-size: cover;
+   background-size: calc(100%);
   }
 }
 
@@ -261,12 +261,12 @@ background-position: center;
   gap: 100px;
 } */
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   table {
     padding-left: 65px;
-  padding-right: 65px;
+    padding-right: 65px;
     }
-  }
+  } */
 
 /* table {
   padding-left: 65px;
