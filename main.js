@@ -46,12 +46,12 @@ function isVictory() {
 function tap(e) {
   if (counter % 2 === 0) {
     e.target.innerHTML =
-      '<img class="tank" src= "./images/tadfnk.png" width=60"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<img class="tank" src= "./images/танк.png" width=60"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
     // '<svg class="icon" width="100" height="100"><use href="./images/sprite.svg#icon-close_thick_icon_137749"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   } else {
     e.target.innerHTML =
       // '<svg class="icon2" width="100" height="100"><use href="./images/sprite.svg#icon-circle_shape_icon_214058-1"></use></svg> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
-      '<img class="tank" src= "./images/самолет (2).png" width=70"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
+      '<img class="tank" src= "./images/самолет.png" width=70"> <audio src="./music/melody4.mp3" autoplay preload="auto"></audio>';
   }
 
   if (isVictory()) {
@@ -60,13 +60,13 @@ function tap(e) {
     }
     if (counter % 2 === 0) {
       text.innerHTML =
-        'Tanks winner! <img src= "./images/tadfnk.png" width=20">  <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Tanks winner! <img src= "./images/танк.png" width=20">  <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerX.textContent = totalX += 1;
       btn.classList.add("btn__active");
       step.classList.add("step__none");
     } else {
       text.innerHTML =
-        'Planes winner! <img src= "./images/самолет (2).png" width=20"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
+        'Planes winner! <img src= "./images/самолет.png" width=20"> <audio src="./music/player0.mp3" autoplay preload="auto"></audio>';
       playerO.textContent = totalO += 1;
       btn.classList.add("btn__active");
     }
@@ -112,7 +112,7 @@ const colorsGame = () => {
 
 function startGame() {
   text.innerHTML =
-    '<img src= "./images/tadfnk.png" width=20"> <img src= "./images/tadfnk.png" width=20"> <img src= "./images/tadfnk.png" width=20"> <img src= "./images/самолет (2).png" width=20"> <img src= "./images/самолет (2).png" width=20"> <img src= "./images/самолет (2).png" width=20"> <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
+    '<img src= "./images/танк.png" width=20"> <img src= "./images/танк.png" width=20"> <img src= "./images/танк.png" width=20"> <img src= "./images/самолет.png" width=20"> <img src= "./images/самолет.png" width=20"> <img src= "./images/самолет.png" width=20"> <audio src="./music/start2.mp3" autoplay preload="auto"></audio>';
   counter = 0;
   btn.classList.remove("btn__active");
   btn.addEventListener("click", colorsGame());
